@@ -9,7 +9,7 @@ import { Tabs, Tab, AppBar, Container, Toolbar, Typography, Box, IconButton, Men
 
 function App() {
 
-  const pages=[{title: "Home", route: "/"}, {title: "About", route: '/about'}]
+  const pages=[{title: "Home", route: "/"}, {title: "Resume", route: '/about'}]
 
   const theme = createTheme({
     palette: {
