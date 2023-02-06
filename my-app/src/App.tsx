@@ -30,12 +30,12 @@ function App() {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
 
             {pages.map((page) => (
-              <Button
+              <NavLink to={page.route}><Button
                 key={page.title}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-            <NavLink to={page.route}>{page.title}</NavLink>
-              </Button>
+            {page.title}
+              </Button></NavLink>
             ))}
           </Box>
 
@@ -61,7 +61,7 @@ function App() {
       </Container>
     </AppBar>
     <Routes>
-      <Route path='/' element={<Home />} />
+      <Route path='/*' element={<Home />} />
       <Route path='/about' element={<About />} />
     </Routes>
     </ThemeProvider>
