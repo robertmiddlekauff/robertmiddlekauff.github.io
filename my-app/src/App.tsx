@@ -5,23 +5,24 @@ import { BrowserRouter, Link, NavLink, Route, Routes } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
 import About from './components/About';
-import { Tabs, Tab, AppBar, Container, Toolbar, Typography, Box, IconButton, MenuItem, Menu, Button, Tooltip } from '@mui/material';
+import { Tabs, Tab, AppBar, Container, Toolbar, Typography, Box, IconButton, MenuItem, Menu, Button, Tooltip, createTheme, ThemeProvider } from '@mui/material';
 
 function App() {
 
-  const routes=['/', '/about']
   const pages=[{title: "Home", route: "/"}, {title: "About", route: '/about'}]
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
 
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: '#000000',
+      },
+    },
+  })
+
 
   return (
     <BrowserRouter>
+    <ThemeProvider theme={theme}>
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -31,7 +32,6 @@ function App() {
             {pages.map((page) => (
               <Button
                 key={page.title}
-                onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
             <NavLink to={page.route}>{page.title}</NavLink>
@@ -64,6 +64,7 @@ function App() {
       <Route path='/' element={<Home />} />
       <Route path='/about' element={<About />} />
     </Routes>
+    </ThemeProvider>
     </BrowserRouter>
   );
 }
