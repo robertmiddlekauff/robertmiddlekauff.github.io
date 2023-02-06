@@ -20,7 +20,7 @@ const About = () => {
             </ul>
             <p>Advantage Solutions September 2014 - January 2017</p>
             <ul>
-                <li>Stuff</li>
+                <li>Stufdf</li>
             </ul>
             </Card>
             </Unstable_Grid2>
