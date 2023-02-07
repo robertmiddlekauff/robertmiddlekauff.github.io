@@ -10,9 +10,7 @@ function App() {
 
   const theme = createTheme({
     palette: {
-      primary: {
-        main: '#000000',
-      },
+      mode: 'dark',
     },
   })
 

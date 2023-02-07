@@ -1,9 +1,10 @@
-a {
-  text-decoration-line: none;
-  color: inherit;
+body {
+    background-color: #121212;
 }
 
-body {
-  background-color: #282c34;
-  color: white;
+a.active button {
+    background-color: rgba(144, 202, 249, 0.08)
+}
+a:active {
+    text-decoration: none;
 }

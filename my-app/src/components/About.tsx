@@ -1,4 +1,4 @@
-import { Card, Unstable_Grid2 as UNSTABLE_GRID2, Typography } from '@mui/material';
+import { Card, Unstable_Grid2 as UNSTABLE_GRID2, Typography, Paper } from '@mui/material';
 
 import React from 'react';
 import BulletedList from './BulletedList';
@@ -19,7 +19,7 @@ const About = () => {
 
     return (
         <UNSTABLE_GRID2 container spacing={2} sx={{ ml: 2, mt: 2}}>
-            <UNSTABLE_GRID2 xs={8}><Typography variant='h3'>Resume</Typography></UNSTABLE_GRID2>
+            <UNSTABLE_GRID2 xs={8}><Paper elevation={0}><Typography variant='h3'>Resume</Typography></Paper></UNSTABLE_GRID2>
             <UNSTABLE_GRID2 xs={8}>
                 <Card>
                     <Typography variant="h5" sx={{ m: 2}}>
