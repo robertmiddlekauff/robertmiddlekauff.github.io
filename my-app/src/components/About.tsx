@@ -1,4 +1,4 @@
-import { Card, Unstable_Grid2, Typography, List, ListItem } from '@mui/material';
+import { Card, Unstable_Grid2 as UNSTABLE_GRID2, Typography } from '@mui/material';
 
 import React from 'react';
 import BulletedList from './BulletedList';
@@ -18,9 +18,9 @@ const About = () => {
     ]
 
     return (
-        <Unstable_Grid2 container spacing={2} sx={{ ml: 2, mt: 2}}>
-            <Unstable_Grid2 xs={8}><Typography variant='h3'>Resume</Typography></Unstable_Grid2>
-            <Unstable_Grid2 xs={8}>
+        <UNSTABLE_GRID2 container spacing={2} sx={{ ml: 2, mt: 2}}>
+            <UNSTABLE_GRID2 xs={8}><Typography variant='h3'>Resume</Typography></UNSTABLE_GRID2>
+            <UNSTABLE_GRID2 xs={8}>
                 <Card>
                     <Typography variant="h5" sx={{ m: 2}}>
                     Experience
@@ -33,8 +33,8 @@ const About = () => {
             <Typography sx={{ ml: 3}}>Advantage Solutions — Senior Business Analyst — September 2014 - January 2017</Typography>
             <BulletedList list={advantageBullets}/>
             </Card>
-            </Unstable_Grid2>
-            <Unstable_Grid2 xs={8}>
+            </UNSTABLE_GRID2>
+            <UNSTABLE_GRID2 xs={8}>
                 <Card>
                 <Typography variant="h5" sx={{ m: 2}}>
                     Education
@@ -43,8 +43,8 @@ const About = () => {
             <BulletedList list={['Bachelor of Arts in Economics and German, Summa Cum Laude']}/>
             </Card>
             
-            </Unstable_Grid2>
-            <Unstable_Grid2 xs={8}>
+            </UNSTABLE_GRID2>
+            <UNSTABLE_GRID2 xs={8}>
                 <Card>
                 <Typography variant="h5" sx={{ m: 2}}>
                     Conferences and Diversity
@@ -52,8 +52,8 @@ const About = () => {
                     <BulletedList list={['InReach Junior Board Member — January 2023 - Present', 'Chair of data collection committee for GHX\'s diversity council — June 2017 - May 2022', 'GHX LGBTQ Employee Resource Group Founder — June 2017 - May 2022', 'Academy Health\'s Health Datapalooza poster presentation “Transforming purchasing data into clinically meaningful action” (February 2020, D.C.)']}/>
             </Card>
             
-            </Unstable_Grid2>
-            <Unstable_Grid2 xs={8}>
+            </UNSTABLE_GRID2>
+            <UNSTABLE_GRID2 xs={8}>
                 <Card>
                 <Typography variant="h5" sx={{ m: 2}}>
                     Skills
@@ -61,8 +61,8 @@ const About = () => {
                     <BulletedList list={['Front-end: JavaScript, Vue, d3.js, Vega, dc.js, BI tools (Tableau, Periscope, Mode)', 'Back-end: PostrgreSQL, Django, Python']}/>
             </Card>
             
-            </Unstable_Grid2>
-        </Unstable_Grid2>
+            </UNSTABLE_GRID2>
+        </UNSTABLE_GRID2>
     )
 }
 
