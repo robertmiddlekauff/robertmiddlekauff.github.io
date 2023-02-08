@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
 
-	const pages=[{title: "Home", route: "/"}, {title: "Resume", route: '/about'}]
+	const pages=[{title: "Home", route: "/"}, {title: "Resume", route: '/about'}, {title: 'Blog', route: '/blog'}]
 
     return(
 		<AppBar position="static">
