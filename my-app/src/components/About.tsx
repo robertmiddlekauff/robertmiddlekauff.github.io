@@ -18,9 +18,9 @@ const About = () => {
     ]
 
     return (
-        <UNSTABLE_GRID2 container spacing={2} sx={{ ml: 2, mt: 2}}>
-            <UNSTABLE_GRID2 xs={8}><Paper elevation={0}><Typography variant='h3'>Resume</Typography></Paper></UNSTABLE_GRID2>
-            <UNSTABLE_GRID2 xs={8}>
+        <UNSTABLE_GRID2 container spacing={2} sx={{ ml: 2, mt: 2, mr: 2}}  maxWidth={1000}>
+            <UNSTABLE_GRID2><Paper elevation={0}><Typography variant='h3'>Resume</Typography></Paper></UNSTABLE_GRID2>
+            <UNSTABLE_GRID2>
                 <Card>
                     <Typography variant="h5" sx={{ m: 2}}>
                     Experience
@@ -34,7 +34,7 @@ const About = () => {
             <BulletedList list={advantageBullets}/>
             </Card>
             </UNSTABLE_GRID2>
-            <UNSTABLE_GRID2 xs={8}>
+            <UNSTABLE_GRID2>
                 <Card>
                 <Typography variant="h5" sx={{ m: 2}}>
                     Education
@@ -44,7 +44,7 @@ const About = () => {
             </Card>
             
             </UNSTABLE_GRID2>
-            <UNSTABLE_GRID2 xs={8}>
+            <UNSTABLE_GRID2>
                 <Card>
                 <Typography variant="h5" sx={{ m: 2}}>
                     Conferences and Diversity
@@ -53,7 +53,7 @@ const About = () => {
             </Card>
             
             </UNSTABLE_GRID2>
-            <UNSTABLE_GRID2 xs={8}>
+            <UNSTABLE_GRID2>
                 <Card>
                 <Typography variant="h5" sx={{ m: 2}}>
                     Skills

@@ -1,6 +1,6 @@
 import { Box } from '@mui/material';
 import React from 'react';
-import { Bar, BarChart, CartesianGrid, Legend, Tooltip, XAxis, YAxis } from "recharts"
+import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts"
 
 const CustomTooltip = ({ active, payload, label }: {active?: boolean, payload?: any, label?: string}) => {
     if (active && payload && payload.length) {
@@ -16,8 +16,8 @@ const CustomTooltip = ({ active, payload, label }: {active?: boolean, payload?: 
 
 const BarChartFactory = ({data}: {data: {name: string; votes: number;}[]}) => {
 return (
-
-    <BarChart width={730} height={500} data={data}>
+<ResponsiveContainer width='100%' height={500}>
+    <BarChart data={data}>
 <CartesianGrid strokeDasharray="3 3" />
 <XAxis dataKey="name" />
 <YAxis />
@@ -25,6 +25,7 @@ return (
 <Legend />
 <Bar dataKey="votes" fill="#8884d8" />
 </BarChart>
+</ResponsiveContainer>
         )
 }
 

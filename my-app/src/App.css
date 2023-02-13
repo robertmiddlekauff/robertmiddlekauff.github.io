@@ -5,6 +5,6 @@ body {
 a.active button {
     background-color: rgba(144, 202, 249, 0.08)
 }
-a:active {
+a:active, a {
     text-decoration: none;
 }

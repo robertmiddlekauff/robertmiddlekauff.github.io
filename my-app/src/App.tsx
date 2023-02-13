@@ -6,6 +6,7 @@ import Home from './components/Home';
 import About from './components/About';
 import { createTheme, ThemeProvider } from '@mui/material';
 import Blog from './components/Blog';
+import ChicagoMayor from './components/posts/ChicagoMayor';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
       <Route path='/*' element={<Home />} />
       <Route path='/about' element={<About />} />
       <Route path='/blog' element={<Blog />} />
+      <Route path='/blog/chicagomayor' element={<ChicagoMayor />} />
     </Routes>
     </ThemeProvider>
     </BrowserRouter>
