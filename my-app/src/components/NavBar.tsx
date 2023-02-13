@@ -38,7 +38,8 @@ const NavBar = () => {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit">
+              color="inherit"
+            >
               <MenuIcon />
             </IconButton>
             <Menu
@@ -57,13 +58,15 @@ const NavBar = () => {
               onClose={handleCloseNavMenu}
               sx={{
                 display: { xs: 'block', md: 'none' }
-              }}>
+              }}
+            >
               {pages.map((page) => (
                 <MenuItem
                   onClick={handleCloseNavMenu}
                   component={Link}
                   to={page.route}
-                  key={page.title}>
+                  key={page.title}
+                >
                   {page.title}
                 </MenuItem>
               ))}
@@ -75,7 +78,8 @@ const NavBar = () => {
                 onClick={handleCloseNavMenu}
                 component={Link}
                 to={page.route}
-                key={page.title}>
+                key={page.title}
+              >
                 {page.title}
               </MenuItem>
             ))}
@@ -94,7 +98,8 @@ const NavBar = () => {
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none'
-            }}>
+            }}
+          >
             Robert Middlekauff
           </Typography>
           <Typography
@@ -110,7 +115,8 @@ const NavBar = () => {
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none'
-            }}>
+            }}
+          >
             RM
           </Typography>
         </Toolbar>

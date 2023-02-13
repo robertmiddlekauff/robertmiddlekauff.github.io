@@ -41,10 +41,10 @@ const ChicagoMayor = () => {
           system of government, this system can lead to many unexpected outcomes.
         </CardContent>
         <CardContent>
-            Chicago used partisan elections for most of its history until the 1983 democratic
-            primary when Harold Washington won with 36% of the vote. While many were excited about
-            Chicago&apos;s first Black mayor, others were frustrated that the white vote was split
-            between Byrne and Daley.
+          Chicago used partisan elections for most of its history until the 1983 democratic primary
+          when Harold Washington won with 36% of the vote. While many were excited about
+          Chicago&apos;s first Black mayor, others were frustrated that the white vote was split
+          between Byrne and Daley.
           <CardHeader title="Chicago 1983 Democratic Primary"></CardHeader>
           <BarChartFactory data={electionPrimary1983} />
         </CardContent>
@@ -66,8 +66,8 @@ const ChicagoMayor = () => {
           <CardHeader title="Chicago 2019 Nonpartisan Primary (consolidated opponents)" />
           <BarChartFactory data={firstRoundTopTwo} />
           <Typography variant="body1" sx={{ mt: 3 }}>
-            While Lori, the top vote getter, went on to win the second round, it&apos;s clear why this
-            system is unfair to most voters and needs to be changed. Luckily there are many
+            While Lori, the top vote getter, went on to win the second round, it&apos;s clear why
+            this system is unfair to most voters and needs to be changed. Luckily there are many
             solutions to this problem out there such as ranked choice voting and approval voting.
           </Typography>
         </CardContent>
