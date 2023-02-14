@@ -86,8 +86,8 @@ const About = () => {
           </Typography>
           <BulletedList
             list={[
-              'Front-end: JavaScript, Vue, d3.js, Vega, dc.js, BI tools (Tableau, Periscope, Mode)',
-              'Back-end: PostrgreSQL, Django, Python'
+              'Front-end: React, TypeScript, JavaScript, Vue, d3.js, Vega, dc.js, BI tools (Tableau, Periscope, Mode)',
+              'Back-end: PostrgreSQL, Django, Python, R'
             ]}
           />
         </Card>
