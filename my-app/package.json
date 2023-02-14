@@ -76,7 +76,7 @@
     }
   },
   "lint-staged": {
-    "*": "npm run prettier:fix",
+    "*.{json, js, tx, jsx, tsx}": "npm run prettier:fix",
     "*.{js,jsx,ts,tsx}": [
       "npm run lint:fix"
     ]

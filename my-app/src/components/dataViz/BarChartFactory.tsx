@@ -1,16 +1,6 @@
 import { Box } from '@mui/material';
-import React, { FunctionComponent, ReactNode } from 'react';
-import {
-  Bar,
-  BarChart,
-  CartesianGrid,
-  Cell,
-  Legend,
-  ResponsiveContainer,
-  Tooltip,
-  XAxis,
-  YAxis
-} from 'recharts';
+import React, { ReactNode } from 'react';
+import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 
 const CustomTooltip = ({
   active,

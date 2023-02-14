@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, CardHeader, Typography } from '@mui/material';
+import { Card, CardContent, CardHeader } from '@mui/material';
 import BarChartFactory from '../dataViz/BarChartFactory';
 import CollapseHelper from '../CollapseHelper';
 import { Cell } from 'recharts';
