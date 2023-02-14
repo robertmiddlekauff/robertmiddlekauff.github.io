@@ -32,9 +32,9 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "eject": "react-scripts eject",
-    "lint": "eslint . --ext .ts",
-    "lint:fix": "eslint --fix .ts",
-    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+    "lint": "eslint . --ext",
+    "lint:fix": "eslint --fix",
+    "format": "prettier --write --config ./.prettierrc"
   },
   "eslintConfig": {
     "extends": [
@@ -74,6 +74,9 @@
     }
   },
   "lint-staged": {
-    "*.js": ["./node_modules/.bin/eslint — fix", "git add"]
+    "*": "npm run prettier:fix -- --ignore-unknown",
+    "*.{js,jsx,ts,tsx}": [
+      "npm run lint:fix"
+    ]
   }
 }
