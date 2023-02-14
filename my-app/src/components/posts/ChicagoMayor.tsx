@@ -46,7 +46,7 @@ const ChicagoMayor = () => {
           Chicago&apos;s first Black mayor, others were frustrated that the white vote was split
           between Byrne and Daley.
           <CardHeader title="Chicago 1983 Democratic Primary"></CardHeader>
-          <BarChartFactory data={electionPrimary1983} />
+          <BarChartFactory data={electionPrimary1983} primaryKey="name" measureKey="votes" />
         </CardContent>
 
         <CardContent>
@@ -55,7 +55,7 @@ const ChicagoMayor = () => {
           the vote. While it is a better system than the partisan system, particularly in a city
           where Republicans are no longer competitive, it can lead to some unfortunate results.
           <CardHeader title="Chicago 2019 Nonpartisan Primary" />
-          <BarChartFactory data={firstRound} />
+          <BarChartFactory data={firstRound} primaryKey="name" measureKey="votes" />
         </CardContent>
         <CardContent>
           The problem with this system is that the top two candidates will advance to the runoff no
@@ -64,7 +64,7 @@ const ChicagoMayor = () => {
           Lori Lightfoot and Preckwinkle together received only 17.5% and 16% respectively. The rest
           of Chicago&apos;s voters were ignored.
           <CardHeader title="Chicago 2019 Nonpartisan Primary (consolidated opponents)" />
-          <BarChartFactory data={firstRoundTopTwo} />
+          <BarChartFactory data={firstRoundTopTwo} primaryKey="name" measureKey="votes" />
           <Typography variant="body1" sx={{ mt: 3 }}>
             While Lori, the top vote getter, went on to win the second round, it&apos;s clear why
             this system is unfair to most voters and needs to be changed. Luckily there are many

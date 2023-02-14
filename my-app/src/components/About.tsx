@@ -16,6 +16,11 @@ const About = () => {
     'Automated advertising reports using Tableau'
   ];
 
+  const gridLayout = {
+    md: 12,
+    sm: 12
+  };
+
   return (
     <UNSTABLE_GRID2 container spacing={2} sx={{ ml: 2, mt: 2, mr: 2 }} maxWidth={1000}>
       <UNSTABLE_GRID2>
@@ -48,7 +53,7 @@ const About = () => {
           <BulletedList list={advantageBullets} />
         </Card>
       </UNSTABLE_GRID2>
-      <UNSTABLE_GRID2>
+      <UNSTABLE_GRID2 {...gridLayout}>
         <Card>
           <Typography variant="h5" sx={{ m: 2 }}>
             Education
@@ -74,7 +79,7 @@ const About = () => {
           />
         </Card>
       </UNSTABLE_GRID2>
-      <UNSTABLE_GRID2>
+      <UNSTABLE_GRID2 {...gridLayout}>
         <Card>
           <Typography variant="h5" sx={{ m: 2 }}>
             Skills

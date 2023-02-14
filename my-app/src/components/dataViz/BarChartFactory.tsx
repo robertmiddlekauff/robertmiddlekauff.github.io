@@ -1,9 +1,10 @@
 import { Box } from '@mui/material';
-import React from 'react';
+import React, { FunctionComponent, ReactNode } from 'react';
 import {
   Bar,
   BarChart,
   CartesianGrid,
+  Cell,
   Legend,
   ResponsiveContainer,
   Tooltip,
@@ -17,13 +18,15 @@ const CustomTooltip = ({
   label
 }: {
   active?: boolean;
-  payload?: { value: number }[];
+  payload?: { value: number; dataKey: string }[];
   label?: string;
 }) => {
   if (active && payload && payload.length) {
+    console.log(payload);
+    const nf = Intl.NumberFormat();
     return (
       <Box sx={{ backgroundColor: 'black', p: 3 }}>
-        <div>{`${label} : ${payload[0].value}`}</div>
+        <div>{`${label} : ${nf.format(payload[0].value)} ${payload[0].dataKey}`}</div>
       </Box>
     );
   }
@@ -31,16 +34,27 @@ const CustomTooltip = ({
   return null;
 };
 
-const BarChartFactory = ({ data }: { data: { name: string; votes: number }[] }) => {
+const BarChartFactory = ({
+  data,
+  primaryKey,
+  measureKey,
+  fillLogic
+}: {
+  data: { [key: string]: string | number | boolean }[];
+  primaryKey: string;
+  measureKey: string;
+  fillLogic?: ReactNode;
+}) => {
   return (
     <ResponsiveContainer width="100%" height={500}>
       <BarChart data={data}>
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
+        <XAxis dataKey={primaryKey} />
+        <YAxis label={measureKey}/>
         <Tooltip content={<CustomTooltip />} />
-        <Legend />
-        <Bar dataKey="votes" fill="#8884d8" />
+        <Bar dataKey={measureKey} fill="#8884d8">
+          {fillLogic}
+        </Bar>
       </BarChart>
     </ResponsiveContainer>
   );
