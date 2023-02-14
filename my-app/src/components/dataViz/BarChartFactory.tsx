@@ -22,7 +22,6 @@ const CustomTooltip = ({
   label?: string;
 }) => {
   if (active && payload && payload.length) {
-    console.log(payload);
     const nf = Intl.NumberFormat();
     return (
       <Box sx={{ backgroundColor: 'black', p: 3 }}>
@@ -50,7 +49,7 @@ const BarChartFactory = ({
       <BarChart data={data}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey={primaryKey} />
-        <YAxis label={measureKey}/>
+        <YAxis label={measureKey} />
         <Tooltip content={<CustomTooltip />} />
         <Bar dataKey={measureKey} fill="#8884d8">
           {fillLogic}
