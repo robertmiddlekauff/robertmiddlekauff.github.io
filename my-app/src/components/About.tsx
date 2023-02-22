@@ -72,7 +72,7 @@ const About = () => {
           <BulletedList
             list={[
               'InReach Junior Board Member — January 2023 - Present',
-              "Chair of data collection committee for GHX's diversity council — June 2017 - May 2022",
+              "Chair of data collection committee for GHX's diversity council — June 2021 - May 2022",
               'GHX LGBTQ Employee Resource Group Founder — June 2017 - May 2022',
               "Academy Health's Health Datapalooza poster presentation “Transforming purchasing data into clinically meaningful action” (February 2020, D.C.)"
             ]}
