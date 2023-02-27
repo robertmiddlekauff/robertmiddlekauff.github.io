@@ -1,6 +1,7 @@
 import { Card, Unstable_Grid2 as UNSTABLE_GRID2, Typography, Paper } from '@mui/material';
 
 import React from 'react';
+import { gridLayout } from '../utils';
 import BulletedList from './BulletedList';
 
 const About = () => {
@@ -15,11 +16,6 @@ const About = () => {
     'Conceptualized wireframes and directed development team for nascent e-commerce platform',
     'Automated advertising reports using Tableau'
   ];
-
-  const gridLayout = {
-    md: 12,
-    sm: 12
-  };
 
   return (
     <UNSTABLE_GRID2 container spacing={2} sx={{ ml: 2, mt: 2, mr: 2 }} maxWidth={1000}>
